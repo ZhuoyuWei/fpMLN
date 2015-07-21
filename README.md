@@ -27,24 +27,50 @@ Then you choose wzy.main.SemanticLinkPrediction as the main function entrance. W
 The meanings of all parameters are described as follows:
 
 inputInfoFile: a file describe all relation types and entity types.
+
 trainDbFile: tripelts file to be used to train formulas structures and weights.
+
 testDbFile: In test process, all triplets in this file are all treated as evidence.
+
 queryDbFile: In test process, we need inference for all triplets in this file.
+
 MaxRound: In learning process, random walk MaxRound times for one seed.
+
 iMaxRound: similar as MaxRound, in inference process, random walk MaxRound times for one seed.
+
 MinLength and MaxLength: they represents minimum and maximum length of formulas learned in structure learning process.
+
 ThreadNum: our implement can run as multithreaded program, you can use this parameter to control the size of the thread pool.
+
 RandomWalkNum: the times of randomly choosing starting seed for random walk.
+
 Query: the relation type you want to predict. Keep maid that we remove all query type triplets in evidences by default.
+
 RestartProbability: the probability of restart from the seed state during random walk process.
+
 Lamda: step size when update weights of formulas.
+
 Upsilon:  error threshold, less then it and the learning stop. 
+
 C: regular coefficient
+
 K: the size of minibanch.
+
 MaxIterator: the maximum iterator times during learning weights.
+
 falseRate: produce falseRate false head for grounding formulas, when random walk for grounding formulas.
+
 BaseDir: the result directory.
+
 islorr: the way of select random walk seed.
 
 
-2.
+After we complete the parameter file, we can simply run the command in the bin folder as follows:
+java wzy.main.SemanticLinkPrediction ../examples/linkprediction/parameters.ai
+
+Finally, you can check the results in Basedir.
+
+
+2. Knowledge Base Completion
+
+
