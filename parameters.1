@@ -1,0 +1,28 @@
+inputInfoFile=/home/mlgroup/wzy/mln_data/webkb-data/webkb.info
+trainDbFile=/home/mlgroup/wzy/mln_data/webkb-data/miss-1.db
+testDbFile=/home/mlgroup/wzy/mln_data/webkb-data/webkb.1.db
+queryDbFile=/home/mlgroup/wzy/mln_data/webkb-data/courseProf/webkb.1.query
+//inputQueryFile=
+MaxRound=50
+MinLength=2
+MaxLength=5
+ThreadNum=1
+RandomWalkNum=20000
+Query=courseProf
+RestartProbability=0.1
+
+//learning process parameter
+Lamda=1.
+Upsilon=1e-4
+C=10.
+K=200000
+MaxIterator=100
+z=1000.
+
+//inference parameter for test
+falseRate=2.
+
+//for writing scripts for run the java program automaticly
+BaseDir=/home/mlgroup/lns_journal/result/courseProfno/test_1
+//MidDir=/mid
+//ResDir=/res
