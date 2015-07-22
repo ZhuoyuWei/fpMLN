@@ -70,7 +70,11 @@ java wzy.main.SemanticLinkPrediction ../examples/linkprediction/parameters.ai
 
 Finally, you can check the results in Basedir.
 
-
 2. Knowledge Base Completion
 
+In paper [2], we use the FB15k as the experimental data set. However, for the computation complexity issue, we use TransE(https://everest.hds.utc.fr/doku.php?id=en:transe) to select instances before inference via grounding network sampling. The details are described in the paper [2].
 
+After selecting instances, we can run wzy.main.KnowledgeBaseCompletion for all relation types in FB15k (total 1345) as follows:
+java wzy.main.KnowledgeBaseCompletion ../examples/kbcompletion. However, it does not work well, you can also use wzy.main.SemanticLinkPrediction to handle the KBC task. We supply two shell scripts (left.stream.TransE.sh and right.stream.TransE.sh) when we run experiments in our paper [2], which are at examples\kbcompletion.
+
+If you want change transition probability for random walks, set scoreFile in the parameter file, and you need supply a score file for all candidate instances. We supply an score file as an example in kbcompletion folder.

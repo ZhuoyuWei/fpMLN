@@ -508,7 +508,7 @@ public class SemanticLinkPrediction {
 		
 		
 		//UseInferObjectToInfer(parameterCollection,learner);
-		System.exit(0);
+		//System.exit(0);
 		
 		//Inference process. It looks like Learning process.
 		long infere_StartTime=System.currentTimeMillis();
